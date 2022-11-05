@@ -16,9 +16,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "npm run-script postinstall && npm run-scripts thebuild",
+    "build": "npm run build",
     "test": "react-scripts test",
-    "thebuild": "react-scripts build,
     "eject": "react-scripts eject",
     "postinstall": "@semantic-ui-css-patch"
   },
