@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "\\Users\\USER\\lolo\\Counter-Calculator-",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
