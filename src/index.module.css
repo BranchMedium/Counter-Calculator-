@@ -1,0 +1,77 @@
+/* parent flex container*/
+.mark {
+    width: 35%;
+    background-color: purple;
+    border-color: purple;
+    margin: 0 auto;
+    margin-top: 100px
+}
+/* child flex container for top and bottom excluding the middle*/
+.row {
+    display: flex;
+    flex-flow: nowrap row;
+    height: 70px;
+    justify-content: space-between;
+}
+/*child flex container for the middle/output*/
+#output {
+    display: flex;
+    flex-flow: nowrap row;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+}
+/*remove the text on all the buttons*/
+@media (max-width: 280px) {
+    div.row button {
+        font-size: 0;
+    }
+}
+/* button design*/
+div.row button {
+    width: 30%;
+    cursor: pointer;
+    height: 40px;
+    border-color: orange;
+    background-color: orange;
+    outline: none;
+}
+/* when the mouse hovers the button*/
+div.row button:hover {
+    color: purple;
+}
+/* effect for the set-value with id check when clicked */
+div.row button#check:active {
+    background-color: orangered;
+    border-color: purple;
+}
+/* input design*/
+div.row input {
+    width: 30%;
+    height: 42px;
+    text-align: center;
+}
+/* right child item*/
+.right {
+    order: 3;
+}
+/* left child item*/
+.left {
+    order: 1;
+}
+/*center child item*/
+.center {
+    order: 2;
+}
+/* design for the input placeholder*/
+.center::placeholder {
+    color: whitesmoke;
+}
+/* position/align the top child container to the bottom*/
+#floor {
+    align-items: flex-end;
+}
+/* position/align the top child container to the top*/
+#ceil {
+    align-items: flex-start;
+}
