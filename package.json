@@ -16,7 +16,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
+<<<<<<< HEAD
     "build": "react-scripts build",
+=======
+    "build": "npm run build",
+>>>>>>> 6d244b7d15b2d620dee9eaa2693c67e7da16ba2e
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "postinstall": "@semantic-ui-css-patch"
