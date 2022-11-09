@@ -21,14 +21,8 @@
     align-items: center;
     height: 40px;
 }
-/*remove the text on all the buttons*/
-@media (max-width: 280px) {
-    div.row button {
-        font-size: 0;
-    }
-}
 /* button design*/
-div.row button {
+div.row input.all {
     width: 30%;
     cursor: pointer;
     height: 40px;
@@ -37,19 +31,27 @@ div.row button {
     outline: none;
 }
 /* when the mouse hovers the button*/
-div.row button:hover {
+div.row input.all:hover {
     color: purple;
 }
 /* effect for the set-value with id check when clicked */
-div.row button#check:active {
+div.row input#check:active {
     background-color: orangered;
     border-color: purple;
 }
 /* input design*/
-div.row input {
+div.row input.center {
     width: 30%;
     height: 42px;
     text-align: center;
+}
+/*remove the spinner in both input on all browsers of chrome, safari, edge, opera*/
+div.row input.center::-webkit-outer-spin-button, div.row input.center::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+/*remove the spinners on all firefox browsers*/
+div.row input.center[type=number] {
+    -moz-appearance: textfield;
 }
 /* right child item*/
 .right {

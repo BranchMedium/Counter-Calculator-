@@ -74,13 +74,13 @@ const Counter = () => {
     //********************************************************************************************************************
     return (
         <div>
-            <h3>After the input, click the set-value to refresh your points</h3>
+            <h3>After input, click the set-value to refresh your points</h3>
             <h3>Caution on the negative value of the decrement input</h3>
             <div className= {theStyles.mark}>
                 <div id={theStyles.ceil} className={theStyles.row}>
+                    <input id={theStyles.check} className={`${theStyles.left} ${theStyles.all}`} onClick={setTheValue} type="submit" value="set-value"/> 
                     <input className={theStyles.center} placeholder='increment' ref= {theInput1} onChange={getPositiveValues} type='number'/>
-                    <button id={theStyles.check} className={theStyles.left} onClick={setTheValue}>Set-value</button>
-                    <button className={theStyles.right} onClick={resetTheValue}>Reset</button>
+                    <input className={`${theStyles.right} ${theStyles.all}`} onClick={resetTheValue} type="submit" value="Reset"/>
                 </div>
                     
                 <div id={theStyles.output}>
@@ -88,8 +88,9 @@ const Counter = () => {
                 </div>  
                     
                 <div id={theStyles.floor} className= {theStyles.row}>
-                    <button className={theStyles.left} onClick={incrementCount}>Increment</button>
-                    <button className={theStyles.right} onClick={decrementCount}>Decrement</button>
+                    <input  className={`${theStyles.left} ${theStyles.all}`} onClick={incrementCount} type="submit" value="Increment"/>
+                    <input className={`${theStyles.right} ${theStyles.all}`} onClick={decrementCount} type="submit" value="Decrement"/>
+    
                     <input className={theStyles.center} ref= {theInput2} placeholder= 'decrement' onChange={getNegativeValues} type= 'number'/>
                 </div>
             </div>
