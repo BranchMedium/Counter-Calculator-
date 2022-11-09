@@ -1,4 +1,5 @@
 import React from 'react';
+import FaultyPage from './error404page';
 
 const CounterHook = () => {
     const Reducer = (state, action) => {
@@ -15,7 +16,7 @@ const CounterHook = () => {
             return {...state, count: state.count = 0}
         }
         else {
-            throw new Error("404");
+            return <FaultyPage/>
         }
     }
     return {Reducer}
