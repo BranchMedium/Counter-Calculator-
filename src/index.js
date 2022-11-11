@@ -57,6 +57,13 @@ const Counter = () => {
     const {Reducer} = CounterHook();
     const [changedCount, dispatch] = useReducer(Reducer, initialState);
     //***************************************************************************************************************
+    const alertNAN = () => {
+        if(isNaN(changedCount.count)) {
+            alert("click the setvalue next-time");
+            return changedCount.count = null;
+        }
+    }
+    alertNAN();
     const setTheValue = () => {
         dispatch({type: 'setValue'});
     }
